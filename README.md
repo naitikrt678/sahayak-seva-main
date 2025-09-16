@@ -8,12 +8,12 @@ This portal provides a unified platform for citizens to report civic issues and 
 
 ## Features
 
-- **Citizen Reporting**: Easy-to-use interface for reporting civic issues
+- **Citizen Reporting**: Easy-to-use interface for reporting civic issues (a separate app)
 - **Admin Dashboard**: Comprehensive management interface for government officials
 - **Interactive Map**: Visual representation of reported issues with heat map analysis
 - **Worker Assignment**: Efficient task allocation to field workers
 - **Real-time Tracking**: Live status updates and progress monitoring
-- **Multi-language Support**: Hindi and English language support
+
 
 ## Technology Stack
 
@@ -30,28 +30,6 @@ This portal provides a unified platform for citizens to report civic issues and 
 - Node.js (version 18 or higher)
 - npm or yarn package manager
 
-### Installation
-
-```bash
-# Clone the repository
-git clone <repository-url>
-
-# Navigate to project directory
-cd sahayak-seva-portal-main
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
 
 ## Project Structure
 
@@ -81,10 +59,4 @@ src/
 4. Monitor resolution progress
 5. Generate reports and analytics
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
 
