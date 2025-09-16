@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SAHAYAK PORTAL - Jharkhand Government Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    /* Government Green Theme */
+    --primary: 120 60% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 120 40% 35%;
+    --primary-dark: 120 70% 15%;
+
+    --secondary: 210 25% 92%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 120 30% 90%;
+    --accent-foreground: 120 60% 25%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 120 50% 45%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 45 95% 55%;
+    --warning-foreground: 0 0% 12%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 96%;
+    --ring: 120 60% 25%;
+
+    --radius: 0.5rem;
+
+    /* Government specific colors */
+    --government-green: 120 60% 25%;
+    --government-orange: 25 95% 55%;
+    --status-success: 120 50% 45%;
+    --status-error: 0 75% 55%;
+    --status-pending: 45 95% 55%;
+
+    /* Gradients */
+    --gradient-government: linear-gradient(135deg, hsl(var(--government-green)), hsl(var(--primary-light)));
+    --gradient-header: linear-gradient(90deg, hsl(var(--government-green)), hsl(var(--primary-dark)));
+
+    /* Shadows */
+    --shadow-government: 0 4px 20px hsl(var(--government-green) / 0.15);
+    --shadow-card: 0 2px 8px hsl(0 0% 0% / 0.08);
+
+    /* Typography */
+    --font-size-government-heading: 1.75rem;
+    --font-weight-government: 600;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Government typography */
+.font-government {
+  font-weight: var(--font-weight-government);
+}
+
+/* Government background patterns */
+.bg-gradient-header {
+  background: var(--gradient-header);
+}
+
+.bg-gradient-government {
+  background: var(--gradient-government);
+}
+
+/* Government shadows */
+.shadow-government {
+  box-shadow: var(--shadow-government);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+/* Map Dashboard Styles */
+.leaflet-container {
+  font-family: inherit;
+  height: 100% !important;
+  width: 100% !important;
+  background: #f8f9fa;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+.custom-popup .leaflet-popup-content {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Ensure proper map rendering */
+.leaflet-tile-container {
+  opacity: 1;
+}
+
+.leaflet-tile {
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Fix any potential transform issues */
+.leaflet-map-pane {
+  position: relative;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Additional map fixes */
+.leaflet-control-zoom {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.leaflet-bar {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+}
+
+/* Ensure tiles load correctly */
+.leaflet-tile-pane > div {
+  z-index: auto !important;
+}
+
+/* Debug styles - can be removed later */
+.leaflet-container.debug {
+  border: 2px solid red;
+}
+
+.leaflet-tile.leaflet-tile-loaded {
+  opacity: 1;
+}
+
+.leaflet-tile {
+  image-rendering: optimizeQuality;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Ensure attribution shows correctly */
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+}
