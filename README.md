@@ -88,10 +88,3 @@ src/
 3. Make your changes
 4. Submit a pull request
 
-## License
-
-This project is developed for the Government of Jharkhand.
-
-## Support
-
-For technical support or questions, please contact the development team.
